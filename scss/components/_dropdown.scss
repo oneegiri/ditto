@@ -1,0 +1,6 @@
+.dropdown{
+    position: relative;
+    @at-root #{&}__title{
+        padding: emRhythm(1, $ms-down1) emRhythm(2, $ms-down1);
+    }
+}

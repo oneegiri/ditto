@@ -292,6 +292,24 @@
     }
 }
 
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before{
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: math.div($height, $width) * 100%;
+    }
+
+    & > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @mixin hide-block {
     margin: -1px;
     padding: 0;

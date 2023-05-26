@@ -1,0 +1,35 @@
+.card{
+
+    &.is\:rounded{
+        overflow: hidden;
+    }
+    
+    @at-root #{&}__image{
+        opacity: 0;
+        @at-root #{&}--wrap{
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include aspect-ratio(16, 9);
+        }
+    }
+
+    @at-root #{&}__header, #{&}__body, #{&}__footer{
+        padding: emRhythm(2, $ms-down1) emRhythm(2, $ms-down1);
+    }
+
+    @at-root #{&}__header{
+        padding-bottom:0;
+    }
+
+    @at-root #{&}__title{
+        margin: 0;
+    }
+
+    @at-root #{&}__body{
+    }
+
+    @at-root #{&}__footer{
+        padding-top:0;
+    }
+}

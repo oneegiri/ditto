@@ -5,16 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="../../../dist/css/style.min.css">
 </head>
 <body>
-  <details class="dropdown" role="list">
-    <summary class="dropdown__summary" aria-haspopup="listbox">Dropdown</summary>
-    <ul class="list" role="listbox">
-      <li class="list__item">
-        <a href="" class="list__link">Action</a>
-      </li>
-    </ul>
-  </details>
+  <div style="max-width: 200px; margin: 0 auto; padding-top:100px;">
+    <details class="dropdown" role="list">
+      <summary class="dropdown__title" aria-haspopup="listbox" style="background-color: bisque;">Dropdown</summary>
+      <ul class="list has:shadow" role="listbox">
+        <li class="list__item">
+          <a href="" class="list__link">Action</a>
+        </li>
+        <li class="list__item">
+          <a href="" class="list__link">Action</a>
+        </li>
+        <li class="list__item">
+          <a href="" class="list__link">Action</a>
+        </li>
+      </ul>
+    </details>
+  </div>
 </body>
 </html>

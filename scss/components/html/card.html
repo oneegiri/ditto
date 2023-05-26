@@ -5,20 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="../../../dist/css/style.min.css">
 </head>
 <body>
   <!--Can be replaced with divs-->
   <!--if the article tag is out of scope-->
-  <article class="card">
-    <header class="card__header">
-      <figure class="card__image--wrap">
-        <img src="#" alt="" class="card__image">
+  <div style="max-width: 500px; margin: 0 auto; padding-top:100px">
+    <article class="card">
+      <figure class="card__image--wrap" style="background-image:url('https://placehold.co/300x200');">
+        <img src="https://placehold.co/300x200" alt="" class="card__image">
       </figure>
-      <h3 class="card__title"></h3>
-    </header>
-    <div class="card__body"></div>
-    <footer class="card__footer"></footer>
-  </article>
+      <header class="card__header">
+        <h3 class="card__title">Card title</h3>
+      </header>
+      <div class="card__body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero possimus voluptatibus eum?</div>
+      <footer class="card__footer">
+        card footer
+      </footer>
+    </article>
+  </div>
 </body>
 </html>

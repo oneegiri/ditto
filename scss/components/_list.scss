@@ -15,9 +15,22 @@
                 margin-right: calculateRem($baseline * 2);
             }
         }
+
+        @at-root .dropdown #{&}{
+            margin-bottom: 0;
+        }
     }
 
     @at-root #{&}__link{
+        text-decoration: none;
 
+        @at-root .dropdown #{&}{
+            padding: emRhythm(1, $ms-down1) emRhythm(2, $ms-down1);
+        }
+    }
+
+    @at-root .dropdown #{&}{
+        margin: 0;
+        padding: 0;
     }
 }
