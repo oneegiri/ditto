@@ -1,0 +1,25 @@
+body {
+    font-family: $font-family, Helvetica, sans-serif;
+    color: map-get($colors, 'font-color');
+    background-color: map-get($colors, 'color-white');
+}
+
+a {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    font-family: $heading-font-family, Helvetica, sans-serif;
+}
+
+strong,
+b {
+    font-weight: bolder;
+}

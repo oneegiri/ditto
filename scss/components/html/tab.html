@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+  <div class="tab--wrap">
+    <nav class="tab__nav" role="tablist">
+      <ul class="list">
+        <li class="list__item">
+          <a href='#' class="list__link" aria-controls='content_{$id}' aria-current="true" id='tab_{$id}' role='tab'></a>
+        </li>
+        <!--End list item-->
+      </ul>
+    </nav>
+    <div class="tab__content" id="content" aria-live="polite" role="region">
+      <article class="tab" id='content_{$id}' role='tabpanel' aria-current="true">
+
+      </article>
+      <!--End tab-->
+    </div>
+  </div>
+</body>
+</html>

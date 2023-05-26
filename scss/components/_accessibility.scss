@@ -1,0 +1,8 @@
+input,textarea,button,a,select{
+    &:focus-visible{
+        box-shadow: inset 0 0 0 .25rem rgba(map-get($colors, 'primary'),.25);
+    }
+    &:focus{
+        box-shadow: inset 0 0 0 .25rem rgba(map-get($colors, 'primary'),.25);
+    }
+}

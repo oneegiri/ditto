@@ -1,0 +1,67 @@
+.button {
+    border: 0;
+    color: map-get($colors, 'color-white');
+    background-color: map-get($colors, 'primary');
+    padding: emRhythm(1.5, $ms-down1) emRhythm(2.5, $ms-down1);
+
+    &:hover {
+        background-color: darken(map-get($colors, 'primary'), 5%);
+    }
+
+    &.is\:outline {
+        background-color: transparent;
+        border: 1px solid map-get($colors, 'primary');
+        color: map-get($colors, 'primary');
+
+        &:hover {
+            background-color: darken(map-get($colors, 'primary'), 5%);
+            color: map-get($colors, 'color-white');
+        }
+    }
+
+    &.is\:secondary {
+        background-color: map-get($colors, 'secondary');
+
+        &:hover {
+            background-color: darken(map-get($colors, 'secondary'), 5%);
+        }
+
+        &.is\:outline {
+            background-color: transparent;
+            border: 1px solid map-get($colors, 'secondary');
+            color: map-get($colors, 'secondary');
+
+            &:hover {
+                background-color: darken(map-get($colors, 'secondary'), 5%);
+                color: map-get($colors, 'color-white');
+            }
+        }
+    }
+
+    @at-root #{&}[aria-busy="true"] {
+        &:after {
+            content: '';
+            width: calculateRem(20px);
+            height: calculateRem(20px);
+            border: 5px solid map-get($colors, 'secondary');
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

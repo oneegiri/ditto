@@ -1,0 +1,43 @@
+$types: (
+    'info',
+    'success',
+    'warning',
+    'error'
+);
+
+.alert {
+    position: relative;
+
+    @each $type in $types {
+        &[data-type="#{$type}"] {
+            color: darken(map-get($colors, '#{$type}'), 35%);
+            background-color: map-get($colors, '#{$type}');
+
+            .alert__title {
+                color: map-get($colors, '#{$type}');
+                background-color: darken(map-get($colors, '#{$type}'), 35%);
+                padding: emRhythm(1, $ms-down1) 0 emRhythm(1, $ms-down1) emRhythm(2, $ms-down1);
+            }
+
+            button{
+                color: #fff;
+            }
+        }
+    }
+
+    @at-root #{&}__content {
+        padding: emRhythm(2, $ms-down1);
+        margin: 0;
+    }
+
+    button {
+        font-size: 0;
+        position: absolute;
+        top: calculateRem(5px);
+        right: calculateRem(10px);
+
+        &::before {
+            font-size: 1rem;
+        }
+    }
+}

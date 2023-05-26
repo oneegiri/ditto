@@ -1,0 +1,30 @@
+.accordion{
+    @at-root #{&}__item{
+    }
+
+    @at-root #{&}__title{
+        position: relative;
+        padding: emRhythm(2, $ms-down1) emRhythm(3, $ms-down1);
+        border-bottom: 1px solid map-get($colors, 'border-color');
+        &:after{
+            position: absolute;
+            top:50%;
+            right: emRhythm(2, $ms-down1);
+            transform: translateY(-50%);
+        }
+        @at-root .accordion__item[open] #{&}{
+            &:after{
+                content: '';
+            }
+        }
+    }
+
+    @at-root #{&}__content{
+        display: none;
+        width: 100%;
+        padding: emRhythm(2, $ms-down1);
+        @at-root .accordion__item[open] #{&}{
+            display: block;
+        }
+    }
+}

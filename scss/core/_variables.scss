@@ -1,0 +1,57 @@
+$columns: 12;
+$gutter: 5px;
+$font-size: 16px;
+$baseline: 8px;
+$icon-font: '';
+$font-family: 'Arial';
+$heading-font-family: 'Arial';
+
+$responsive: (
+    gutter: 0,
+    offset: 0
+);
+
+$colors: (
+    primary: #61b872,
+    secondary: #d39b39,
+    primary-hover: darken(#61b872, 5%),
+    secondary-hover: darken(#d39b39, 5%),
+    text-color: #868686,
+    color-white: #ffffff,
+    color-black: #000000,
+    border-color: #f6f6f6,
+    warning:#ffba00,
+    success:#15CD72,
+    error:#ED4F32,
+    info:#4bb1cf,
+) !default;
+
+$fractions: (
+    full: 100%,
+    half: 50%,
+    one-third: 33.33333%,
+    two-thirds: 66.66666%,
+    one-fourth: 25%,
+    one-fifth: 20%,
+    two-fifths: 40%,
+    four-fifths: 80%,
+    one-sixth: 16.66666%,
+    five-sixths: 83.33333%
+) !default;
+
+$grid-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+) !default;
+
+$heading-font-sizes: (
+    h1: 3.5em, /* 16px x 3.5 = 56px */
+    h2: 3em, /* 16px x 3   = 48px */
+    h3: 2.5em, /* 16px x 2.5 = 40px */
+    h4: 2em, /* 16px x 2   = 32px */
+    h5: 1.5em, /* 16px x 1.5 = 24px */
+    h6: 1em /* 16px x 1   = 16px */
+) !default;

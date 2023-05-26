@@ -1,0 +1,23 @@
+.list{
+    list-style-type: none;
+    @at-root #{&}--inline{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    @at-root #{&}__item{
+        &:not(:last-child){
+            margin-bottom: calculateRem($baseline * 2);
+        }
+
+        @at-root .list--inline #{&}{
+            &:not(:last-child){
+                margin-right: calculateRem($baseline * 2);
+            }
+        }
+    }
+
+    @at-root #{&}__link{
+
+    }
+}
