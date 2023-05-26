@@ -1,0 +1,31 @@
+{
+    "name": "signal-ui",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "npm run dev:sass",
+        "build": "npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run build:js",
+        "build-autoprefix": "postcss --use autoprefixer --map false --output public/dist/css/style.min.css public/dist/css/style.min.css",
+        "build-cleancss": "cleancss -o public/dist/css/style.min.css public/dist/css/style.min.css",
+        "build-sass": "node-sass --output-style compressed --source-map true resources/scss/style.scss public/build/css/style.min.css",
+        "clean": "rimraf public/build/css",
+        "rtl": "npm run rtl-sass && npm run rtl-autoprefix && npm run rtl-cleancss",
+        "rtl-sass": "node-sass --output-style compressed --source-map true public/scss/style-rtl.scss public/dist/css/style-rtl.min.css",
+        "rtl-autoprefix": "postcss --use autoprefixer --map false --output public/scss/style-rtl.scss public/dist/css/style-rtl.min.css",
+        "rtl-cleancss": "cleancss -o public/build/css/style-rtl.min.css public/build/css/style-rtl.min.css",
+        "deploy": "npm run clean && npm run build && npm run rtl",
+        "dev:sass": "sass --watch scss/style.scss:dist/css/style.min.css --color",
+        "dev:js": "esbuild resources/js/main.js --bundle --outfile=public/build/js/main.min.js --watch",
+        "build:js": "esbuild resources/js/main.js --bundle --outfile=public/build/js/main.min.js --format=iife --legal-comments=none --minify --sourcemap"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "clean-css-cli": "^5.6.0",
+        "esbuild": "^0.17.15",
+        "eslint": "^8.38.0",
+        "eslint-plugin-no-unsanitized": "^4.0.2",
+        "eslint-plugin-xss": "^0.1.12",
+        "node-sass": "^7.0.1",
+        "rimraf": "^3.0.2",
+        "sass": "^1.62.0"
+    }
+}
