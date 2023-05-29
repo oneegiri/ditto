@@ -1,0 +1,33 @@
+.breadcrumb{
+    @at-root #{&}__list{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @at-root #{&}__item{
+        position: relative;
+
+        &:not(:last-child){
+            &:after{
+                content: '/';
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+        }
+
+        &:last-child{
+            padding: emRhythm(1, $ms-down1);
+        }
+    }
+
+    @at-root #{&}__link{
+        padding: emRhythm(1, $ms-down1);
+        text-decoration: none;
+    }
+}

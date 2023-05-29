@@ -1,140 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="../../../dist/css/style.min.css">
 </head>
+
 <body>
-  <!--Every input wil have aria-invalid="true|false" when validated-->
-  <form class="form" action="">
-    <fieldset class="form__group">
-      <legend class="form__legend"></legend>
-      <label class="form__label" for="">
-        <span></span>
-        <input type="radio" class="form__radio" id="" name="">
-      </label>
-      <!--End input-->
-      <!--Role switch enable/disable the switch css-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="checkbox" role="switch" class="form__checkbox" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="text" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="password" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="date" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="number" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="number" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="tel" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="time" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="datetime-local" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="file" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="image" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="month" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="range" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="reset" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="search" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="url" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="week" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <input type="color" class="form__input" id="" name="">
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <span></span>
-        <select class="form__select" name="" id="">
-          <option value=""></option>
-          <optgroup label="">
-            <option value=""></option>
-          </optgroup>
-        </select>
-      </label>
-      <!--End select-->
-      <label class="form__label" for="">
-        <span></span>
-        <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
-      </label>
-      <!--End input-->
-      <label class="form__label" for="">
-        <input list="browsers">
-        <datalist class="form__datalist" id="browsers">
-          <option value="Internet Explorer">
-          <option value="Firefox">
-          <option value="Chrome">
-          <option value="Opera">
-          <option value="Safari">
-        </datalist>
-      </label>
-    </fieldset>
-    <!--End group-->
-  </form>
+  <!--Every input will have aria-invalid="true|false" when validated-->
+  <div style="width: 400px; margin: 0 auto; padding-top:100px;">
+    <form class="form" action="">
+      <fieldset class="form__group">
+        <legend class="form__legend">Form legend</legend>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Radio</span>
+            <input type="radio" class="form__radio" id="" name="">
+          </label>
+          <!--End input-->
+          <!--Role switch enable/disable the switch css-->
+          <label class="form__label" for="">
+            <span>Checkbox</span>
+            <input type="checkbox" class="form__checkbox" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Text</span>
+            <input type="text" class="form__input" id="" name="" aria-invalid="true">
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Password</span>
+            <input type="password" class="form__input" id="" name="" aria-invalid="false">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Date</span>
+            <input type="date" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Number</span>
+            <input type="number" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Tel</span>
+            <input type="tel" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Time</span>
+            <input type="time" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Datetime local</span>
+            <input type="datetime-local" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>File</span>
+            <input type="file" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Month</span>
+            <input type="month" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Range</span>
+            <input type="range" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Search</span>
+            <input type="search" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Url</span>
+            <input type="url" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Week</span>
+            <input type="week" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Color</span>
+            <input type="color" class="form__input" id="" name="">
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Select</span>
+            <select class="form__select" name="" id="">
+              <option value="">Option</option>
+              <optgroup label="Group">
+                <option value="">Optgroup</option>
+              </optgroup>
+            </select>
+          </label>
+          <!--End select-->
+        </div>
+        <div class="grid">
+          <label class="form__label" for="">
+            <span>Textarea</span>
+            <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
+          </label>
+          <!--End input-->
+          <label class="form__label" for="">
+            <span>Datalist</span>
+            <input list="browsers" class="form__datalist">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+          </label>
+        </div>
+      </fieldset>
+      <!--End group-->
+    </form></div>
 </body>
+
 </html>
